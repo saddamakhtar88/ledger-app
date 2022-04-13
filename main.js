@@ -19,13 +19,8 @@ __webpack_require__.r(__webpack_exports__);
 
 const routes = [
     {
-        path: 'home',
-        loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("default-src_app_add-transaction_add-transaction_page_ts"), __webpack_require__.e("common"), __webpack_require__.e("src_app_home_home_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./home/home.module */ 8245)).then(m => m.HomePageModule)
-    },
-    {
         path: '',
-        redirectTo: 'home',
-        pathMatch: 'full'
+        loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("default-src_app_add-transaction_add-transaction_page_ts"), __webpack_require__.e("common"), __webpack_require__.e("src_app_home_home_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./home/home.module */ 8245)).then(m => m.HomePageModule)
     },
     {
         path: 'add-transaction',
