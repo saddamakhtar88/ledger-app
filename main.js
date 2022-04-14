@@ -161,7 +161,7 @@ let BillReceiptComponent = class BillReceiptComponent {
             return total + num;
         }
         this.totalAmount = this.challanRows.map(challan => challan.weight * challan.rate).reduce(getSum, 0);
-        const minNoRows = 10;
+        const minNoRows = 15;
         if (this.challanRows.length < minNoRows) {
             for (let index = this.challanRows.length; index < minNoRows; index++) {
                 this.challanRows.push(new src_app_model_challan__WEBPACK_IMPORTED_MODULE_2__.Challan());
