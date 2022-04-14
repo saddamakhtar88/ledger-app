@@ -158,7 +158,7 @@ let HomePage = class HomePage {
             // this.router.navigate(['/add-transaction'])
             const modal = yield this.modalController.create({
                 component: _add_transaction_add_transaction_page__WEBPACK_IMPORTED_MODULE_3__.AddTransactionPage,
-                cssClass: 'fullscreen',
+                cssClass: 'fullscreenheight',
                 componentProps: {
                     account: account
                 }
@@ -174,7 +174,7 @@ let HomePage = class HomePage {
         return (0,tslib__WEBPACK_IMPORTED_MODULE_8__.__awaiter)(this, void 0, void 0, function* () {
             const modal = yield this.modalController.create({
                 component: _add_transaction_add_transaction_page__WEBPACK_IMPORTED_MODULE_3__.AddTransactionPage,
-                cssClass: 'fullscreen',
+                cssClass: 'fullscreenheight',
                 componentProps: {
                     account: account,
                     transaction: transaction

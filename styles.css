@@ -1243,5 +1243,9 @@ ion-modal.fullscreen {
   --height: 100%;
   --border-radius: 0;
 }
+ion-modal.fullscreenheight {
+  --height: 100%;
+  --border-radius: 0;
+}
 
 /*# sourceMappingURL=styles.css.map*/
