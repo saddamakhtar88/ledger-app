@@ -1238,6 +1238,14 @@ sub {
 .ion-align-items-baseline {
   align-items: baseline !important;
 }
+.divider {
+  width: 100%;
+  height: 1px;
+  border: 1px solid var(--ion-color-medium);
+  margin-top: 4px;
+  margin-bottom: 4px;
+  opacity: 0.3;
+}
 ion-modal.fullscreen {
   --width: 100%;
   --height: 100%;

@@ -205,6 +205,9 @@ let AddAccountPage = class AddAccountPage {
     onTypeSelectionChange(event) {
         this.selectedTransactionType = event.detail.value;
     }
+    onCloseClick() {
+        this.modalController.dismiss();
+    }
 };
 AddAccountPage.ctorParameters = () => [
     { type: _api_account_service__WEBPACK_IMPORTED_MODULE_2__.AccountService },
@@ -248,7 +251,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-header>\n  <ion-toolbar>\n    <ion-title>New Account</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content fullscreen>\n  <form>\n    <ion-list>\n      <ion-item>\n        <ion-input placeholder=\"Name\" [formControl]=\"nameFormControl\"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-input placeholder=\"Opening Balance\" [formControl]=\"openingBalanceFormControl\"></ion-input>\n      </ion-item>\n        <ion-radio-group (ionChange)=\"onTypeSelectionChange($event)\" [value]=\"selectedTransactionType\">\n          <ion-row class=\"\">\n            <ion-col class=\"\" size=\"8\">\n              <ion-item>\n                <ion-label>Type</ion-label>\n              </ion-item>\n            </ion-col>\n            <ion-col class=\"\" size=\"2\">\n              <ion-item>\n                <ion-label>Cr </ion-label>\n                <ion-radio value=\"Cr\"></ion-radio>\n              </ion-item>\n            </ion-col>\n            <ion-col class=\"\" size=\"2\">\n              <ion-item>\n                <ion-label>Dr</ion-label>\n                <ion-radio value=\"Dr\"></ion-radio>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n      </ion-radio-group>\n    </ion-list>\n  </form>\n</ion-content>\n<ion-footer>\n  <ion-toolbar>\n    <ion-button expand=\"block\" (click)=\"onAddClick()\" [disabled]=\"!isValidInfo()\">\n      Add\n    </ion-button>\n  </ion-toolbar>\n</ion-footer>\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-header>\n  <ion-toolbar>\n    <ion-title mode=\"md\">New Account</ion-title>\n    <ion-buttons slot=\"primary\">\n      <ion-button color=\"primary\" (click)=\"onCloseClick()\">\n        <ion-icon slot=\"end\" name=\"close\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content fullscreen>\n  <form>\n        <ion-input placeholder=\"Name\" [formControl]=\"nameFormControl\"></ion-input>\n        <div class=\"divider\"></div>\n        <ion-input placeholder=\"Opening Balance\" [formControl]=\"openingBalanceFormControl\"></ion-input>\n        <div class=\"divider\"></div>\n        <ion-radio-group (ionChange)=\"onTypeSelectionChange($event)\" [value]=\"selectedTransactionType\">\n          <ion-row class=\"\">\n            <ion-col class=\"\" size=\"8\">\n                <ion-label>Type</ion-label>\n            </ion-col>\n            <ion-col class=\"ion-no-padding\" size=\"2\">\n                <ion-label>Cr </ion-label>\n                <ion-radio value=\"Cr\"></ion-radio>\n            </ion-col>\n            <ion-col class=\"ion-no-padding\" size=\"2\">\n                <ion-label>Dr</ion-label>\n                <ion-radio value=\"Dr\"></ion-radio>\n            </ion-col>\n          </ion-row>\n      </ion-radio-group>\n      <div class=\"divider\"></div>\n  </form>\n</ion-content>\n<ion-footer>\n  <ion-toolbar>\n    <ion-button expand=\"block\" (click)=\"onAddClick()\" [disabled]=\"!isValidInfo()\">\n      Add\n    </ion-button>\n  </ion-toolbar>\n</ion-footer>\n");
 
 /***/ }),
 
@@ -258,7 +261,7 @@ __webpack_require__.r(__webpack_exports__);
   \***************************************************/
 /***/ ((module) => {
 
-module.exports = ".type-container {\n  margin: 10px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFkZC1hY2NvdW50LnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFlBQUE7QUFDSiIsImZpbGUiOiJhZGQtYWNjb3VudC5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudHlwZS1jb250YWluZXIge1xuICAgIG1hcmdpbjogMTBweDtcbn0iXX0= */";
+module.exports = ".type-container {\n  margin: 10px;\n}\n\nform {\n  margin: 20px;\n}\n\nion-title {\n  padding-inline: 8px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFkZC1hY2NvdW50LnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFlBQUE7QUFDSjs7QUFFQTtFQUNJLFlBQUE7QUFDSjs7QUFFQTtFQUNJLG1CQUFBO0FBQ0oiLCJmaWxlIjoiYWRkLWFjY291bnQucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnR5cGUtY29udGFpbmVyIHtcbiAgICBtYXJnaW46IDEwcHg7XG59XG5cbmZvcm0ge1xuICAgIG1hcmdpbjogMjBweDtcbn1cblxuaW9uLXRpdGxlIHtcbiAgICBwYWRkaW5nLWlubGluZTogOHB4O1xuICB9XG4gICJdfQ== */";
 
 /***/ })
 
