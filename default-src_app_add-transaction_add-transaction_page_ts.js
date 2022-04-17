@@ -190,7 +190,7 @@ let AddTransactionPage = AddTransactionPage_1 = class AddTransactionPage {
         this.selectedTransactionType = 'Dr';
         this.amountFormControl = new _angular_forms__WEBPACK_IMPORTED_MODULE_5__.FormControl('', [
             _angular_forms__WEBPACK_IMPORTED_MODULE_5__.Validators.required,
-            _angular_forms__WEBPACK_IMPORTED_MODULE_5__.Validators.pattern("^[0-9]*$")
+            _angular_forms__WEBPACK_IMPORTED_MODULE_5__.Validators.pattern("^[+-]?([0-9]+\.?[0-9]*|\.[0-9]+)$")
         ]);
         this.descriptionFormControl = new _angular_forms__WEBPACK_IMPORTED_MODULE_5__.FormControl('', [
             _angular_forms__WEBPACK_IMPORTED_MODULE_5__.Validators.required
@@ -203,11 +203,11 @@ let AddTransactionPage = AddTransactionPage_1 = class AddTransactionPage {
         ]);
         this.challanWeightFormControl = new _angular_forms__WEBPACK_IMPORTED_MODULE_5__.FormControl('', [
             _angular_forms__WEBPACK_IMPORTED_MODULE_5__.Validators.required,
-            _angular_forms__WEBPACK_IMPORTED_MODULE_5__.Validators.pattern("^[0-9]*$")
+            _angular_forms__WEBPACK_IMPORTED_MODULE_5__.Validators.pattern("^[+-]?([0-9]+\.?[0-9]*|\.[0-9]+)$")
         ]);
         this.challanRateFormControl = new _angular_forms__WEBPACK_IMPORTED_MODULE_5__.FormControl('', [
             _angular_forms__WEBPACK_IMPORTED_MODULE_5__.Validators.required,
-            _angular_forms__WEBPACK_IMPORTED_MODULE_5__.Validators.pattern("^[0-9]*$")
+            _angular_forms__WEBPACK_IMPORTED_MODULE_5__.Validators.pattern("^[+-]?([0-9]+\.?[0-9]*|\.[0-9]+)$")
         ]);
         this.challanDetail = [];
     }

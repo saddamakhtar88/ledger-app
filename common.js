@@ -182,7 +182,8 @@ let AddAccountPage = class AddAccountPage {
             _angular_forms__WEBPACK_IMPORTED_MODULE_4__.Validators.required
         ]);
         this.openingBalanceFormControl = new _angular_forms__WEBPACK_IMPORTED_MODULE_4__.FormControl('', [
-            _angular_forms__WEBPACK_IMPORTED_MODULE_4__.Validators.required
+            _angular_forms__WEBPACK_IMPORTED_MODULE_4__.Validators.required,
+            _angular_forms__WEBPACK_IMPORTED_MODULE_4__.Validators.pattern("^[+-]?([0-9]+\.?[0-9]*|\.[0-9]+)$")
         ]);
     }
     ngOnInit() {
@@ -198,9 +199,9 @@ let AddAccountPage = class AddAccountPage {
         this.modalController.dismiss();
     }
     isValidInfo() {
-        // let isValid = !this.amountFormControl.invalid && this.amountFormControl.value.trim().length > 0;
-        // isValid = isValid && !this.descriptionFormControl.invalid && this.descriptionFormControl.value.trim().length > 0;
-        return true;
+        let isValid = !this.nameFormControl.invalid && this.nameFormControl.value.trim().length > 0;
+        isValid = isValid && !this.openingBalanceFormControl.invalid;
+        return isValid;
     }
     onTypeSelectionChange(event) {
         this.selectedTransactionType = event.detail.value;
