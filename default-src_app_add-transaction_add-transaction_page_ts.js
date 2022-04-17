@@ -369,6 +369,13 @@ let AccountService = class AccountService {
             }
             originalAccount.balance = transaction.balance;
         }
+        this.updateTotalBalance();
+    }
+    updateTotalBalance() {
+        function getSum(total, num) {
+            return total + num;
+        }
+        this.accounts.totalBalance = this.accounts.accounts.map(account => account.balance).reduce(getSum, 0);
     }
     sortTransactions(accountId) {
         let account = this.accounts.accounts.filter(account => account.id === accountId)[0];
