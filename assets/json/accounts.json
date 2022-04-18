@@ -1,4 +1,5 @@
 {
     "accounts": [],
-    "totalBalance": 0
+    "totalBalance": 0,
+    "currentBillNumber": 0
 }
