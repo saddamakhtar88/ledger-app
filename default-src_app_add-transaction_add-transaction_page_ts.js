@@ -258,7 +258,7 @@ let AddTransactionPage = AddTransactionPage_1 = class AddTransactionPage {
         let challan = new _model_challan__WEBPACK_IMPORTED_MODULE_4__.Challan();
         challan.number = this.challanNoFormControl.value.trim();
         challan.description = this.challanDescFormControl.value.trim();
-        challan.weight = this.challanWeightFormControl.value.trim();
+        challan.weight = Number(this.challanWeightFormControl.value.trim());
         challan.rate = Number(this.challanRateFormControl.value.trim());
         this.challanDetail.push(challan);
         this.challanNoFormControl.reset();
